@@ -6,19 +6,19 @@ spring:
   cloud:
     gateway:
       routes:
-        - id: course-service
-          uri: lb://COURSE-SERVICE
+        - id: iam-service
+          uri: lb://IAM-SERVICE
           predicates:
-            - Path=/course/**
+            - Path=/appUser/**
           filters:
             - name: Retry
               args:
                 retries: 1
 
-        - id: faculty-service
-          uri: lb://FACULTY-SERVICE
+        - id: student-service
+          uri: lb://STUDENT-SERVICE
           predicates:
-            - Path=/faculty/**
+            - Path=/student/**
           filters:
             - name: Retry
               args:
