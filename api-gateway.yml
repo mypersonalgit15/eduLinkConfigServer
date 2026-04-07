@@ -23,6 +23,15 @@ spring:
             - name: Retry
               args:
                 retries: 1
+                
+        - id: faculty-service
+          uri: lb://FACULTY-SERVICE
+          predicates:
+            - Path=/faculty/**
+          filters:
+            - name: Retry
+              args:
+                retries: 1
 eureka:
   instance:
     lease-renewal-interval-in-seconds: 10
