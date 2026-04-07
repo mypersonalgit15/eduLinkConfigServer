@@ -39,12 +39,12 @@ eureka:
 resilience4j:
   retry:
     instances:
-      facultyRetry:
+      appUserRegistration:
         max-attempts: 3
         wait-duration: 2s
   circuitbreaker:
     instance:
-      courseService:
+      appUserRegistration:
         sliding-window-size: 5
         minimum-number-calls: 5
         failure-rate-threshould: 50
