@@ -41,6 +41,15 @@ spring:
             - name: Retry
               args:
                 retries: 1
+
+        - id: enrollment-service
+          uri: lb://ENROLLMENT-SERVICE
+          predicates:
+            - Path=/faculty-course-assignment/**
+          filters:
+            - name: Retry
+              args:
+                retries: 1
 eureka:
   instance:
     lease-renewal-interval-in-seconds: 10
