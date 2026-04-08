@@ -45,7 +45,7 @@ spring:
         - id: enrollment-service
           uri: lb://ENROLLMENT-SERVICE
           predicates:
-            - Path=/faculty-course-assignment/**
+            - Path=/faculty-course-assignment/**, /student-course-assignment/**
           filters:
             - name: Retry
               args:
