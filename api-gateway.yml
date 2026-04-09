@@ -63,7 +63,7 @@ spring:
         - id: academic-service
           uri: lb://ACADEMIC-SERVICE
           predicates:
-            - Path=/grade/**, /exam/**
+            - Path=/grade/**, /exam/**, /assignment/**
           filters:
             - name: Retry
               args:
