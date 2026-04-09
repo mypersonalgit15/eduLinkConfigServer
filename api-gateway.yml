@@ -50,6 +50,15 @@ spring:
             - name: Retry
               args:
                 retries: 1
+
+        - id: engagement-service
+          uri: lb://ENGAGEMENT-SERVICE
+          predicates:
+            - Path=/attendance/**, /feedback/**
+          filters:
+            - name: Retry
+              args:
+                retries: 1
 eureka:
   instance:
     lease-renewal-interval-in-seconds: 10
