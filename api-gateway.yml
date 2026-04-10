@@ -1,3 +1,20 @@
+springdoc:
+  swagger-ui:
+    urls:
+      - name: IAM-Service
+        url: /appUser/v3/api-docs
+      - name: Student-Service
+        url: /student/v3/api-docs
+      - name: Faculty-Service
+        url: /faculty/v3/api-docs
+      - name: Course-Service
+        url: /course/v3/api-docs
+      - name: Enrollment-Service
+        url: /faculty-course-assignment/v3/api-docs
+      - name: Engagement-Service
+        url: /attendance/v3/api-docs
+      - name: Academic-Service
+        url: /grade/v3/api-docs
 server:
   port: 8081
 spring:
