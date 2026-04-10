@@ -2,6 +2,7 @@ springdoc:
   api-docs:
     path: /v3/api-docs
 server:
+  forward-headers-strategy: framework
   port: 0
 logging:
   level:
