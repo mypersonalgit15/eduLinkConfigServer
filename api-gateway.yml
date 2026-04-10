@@ -1,5 +1,6 @@
 springdoc:
   swagger-ui:
+    path: /swagger-ui.html
     urls:
       - name: IAM-Service
         url: /appUser/v3/api-docs
