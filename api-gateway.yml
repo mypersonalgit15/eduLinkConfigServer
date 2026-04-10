@@ -16,6 +16,11 @@ springdoc:
         url: /attendance/v3/api-docs
       - name: Academic-Service
         url: /grade/v3/api-docs
+  api-docs:
+    path: /v3/api-docs
+  enable-native-support: true
+  use-management-port: false
+  show-actuator: false
 server:
   port: 8081
 spring:
