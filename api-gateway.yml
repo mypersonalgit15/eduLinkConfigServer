@@ -36,7 +36,7 @@ spring:
         - id: course-service
           uri: lb://COURSE-SERVICE
           predicates:
-            - Path=/course/**
+            - Path=/course/**, /learningMaterial/**
           filters:
             - name: Retry
               args:
