@@ -6,7 +6,7 @@ management:
   endpoint:
     health:
       show-details: always
-    
+
 springdoc:
   swagger-ui:
     path: /swagger-ui.html
@@ -30,6 +30,7 @@ springdoc:
 
 server:
   port: 8081
+
 spring:
   application:
     name: api-gateway
@@ -53,7 +54,7 @@ spring:
             - name: Retry
               args:
                 retries: 1
-                
+
         - id: faculty-service
           uri: lb://FACULTY-SERVICE
           predicates:
@@ -62,7 +63,7 @@ spring:
             - name: Retry
               args:
                 retries: 1
-                
+
         - id: course-service
           uri: lb://COURSE-SERVICE
           predicates:
@@ -98,6 +99,7 @@ spring:
             - name: Retry
               args:
                 retries: 1
+
 eureka:
   instance:
     lease-renewal-interval-in-seconds: 10
