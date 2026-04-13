@@ -3,9 +3,6 @@ spring:
     name: auth-service
 server:
   port: 8082
-  servlet:
-    context-path: /
-
 eureka:
   client:
     service-url:
