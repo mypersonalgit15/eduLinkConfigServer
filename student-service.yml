@@ -68,3 +68,5 @@ feign:
       default:
         connectTimeout: 3000
         readTimeout: 5000
+      iam-service:
+        url: http://iam-service
