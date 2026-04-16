@@ -34,14 +34,20 @@ server:
 spring:
   application:
     name: api-gateway
-  autoconfigure:
-    exclude:
-      - org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration
-      - org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration
-      - org.springframework.boot.autoconfigure.data.redis.RedisAutoConfiguration
   cloud:
+    config:
+      enabled: false
     gateway:
       routes:
+        - id: auth-service
+          uri: lb://AUTH-SERVICE
+          predicates:
+            - Path=/auth/**
+          filters:
+            - name: Retry
+              args:
+                retries: 1
+
         - id: iam-service
           uri: lb://IAM-SERVICE
           predicates:
