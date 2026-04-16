@@ -9,7 +9,7 @@ management:
 
 springdoc:
   api-docs:
-    path: /v3/api-docs 
+    path: /v3/api-docs
 server:
   port: 0
 logging:
