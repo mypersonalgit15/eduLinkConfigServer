@@ -18,5 +18,5 @@ logging:
     console: "%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n"
 
 jwt:
-  secret: mySecretKeyForJwtTokenGenerationWhichIsLongEnoughToBeSecure123456789
+  secret: ${JwtSecret}
   expiration: 36000000
